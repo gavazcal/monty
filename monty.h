@@ -38,7 +38,8 @@ typedef struct instruction_s
 } instruction_t;
 
 /*PLACEHOLDER FOR FUNCTION PROTOTYPES*/
-void executions(char *opcode, stack_t **stack, unsigned int param);
+void executions(char *opcode, unsigned int param);
 void push(stack_t **stack, unsigned int param);
+void pall(stack_t **stack, __attribute__((unused))unsigned int param);
 
 #endif
