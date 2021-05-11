@@ -23,7 +23,6 @@ int main(int argc, char *argv[])
 		for (line_count = 1; getline(&input, &str_len, file) != -1; line_count++)
 		{
 			tokens = strtok(input, delim);
-			printf("%s\n", tokens);
 			if (strcmp(tokens, "push") == 0)
 			{
 				/*call opcode functions*/;
@@ -31,5 +30,7 @@ int main(int argc, char *argv[])
 
 		}
 	}
+	free(tokens);
+	fclose(file);
 	return (0);
 }
