@@ -1,5 +1,5 @@
 #include "monty.h"
-
+int line_count;
 /**
  * push - pushes a element into the stack
  * @stack: the stack
@@ -11,7 +11,7 @@ void push(stack_t **stack, unsigned int param)
 
 	if (param == 0)
 	{
-		dprintf(2, "%d: usage: push interger\n", param);
+		dprintf(2, "%d: usage: push interger\n", line_count);
 		exit(EXIT_FAILURE);
 	}
 	new = malloc(sizeof(stack_t));

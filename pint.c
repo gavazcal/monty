@@ -1,5 +1,5 @@
 #include "monty.h"
-
+int line_count;
 /**
  * pint - prints the top value of the stack
  * @stack: the stack
@@ -12,7 +12,7 @@ void pint(stack_t **stack, __attribute__((unused))unsigned int param)
 
 	if (*stack == NULL)
 	{
-		printf("%d: can't pint, stack empty\n", param);
+		dprintf(2, "%d: can't pint, stack empty\n", line_count);
 		exit(EXIT_FAILURE);
 	}
 	temp = *stack;
