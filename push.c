@@ -11,7 +11,7 @@ void push(stack_t **stack, unsigned int param)
 
 	if (param == 0)
 	{
-		dprintf(2, "%d: usage: push interger\n", line_count);
+		dprintf(2, "L%d: usage: push interger\n", line_count);
 		exit(EXIT_FAILURE);
 	}
 	new = malloc(sizeof(stack_t));

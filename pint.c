@@ -12,7 +12,7 @@ void pint(stack_t **stack, __attribute__((unused))unsigned int param)
 
 	if (*stack == NULL)
 	{
-		dprintf(2, "%d: can't pint, stack empty\n", line_count);
+		dprintf(2, "L%d: can't pint, stack empty\n", line_count);
 		exit(EXIT_FAILURE);
 	}
 	temp = *stack;
