@@ -17,6 +17,7 @@ void executions(char *opcode, stack_t **stack, unsigned int param)
 		{"swap", swap},
 		{"nop", nop},
 		{"add", add},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 
