@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * pall - prints the entire stack
+ * @stack: the stack
+ * @param: the parameter
+ */
 void pall(stack_t **stack, __attribute__((unused))unsigned int param)
 {
 	stack_t *temp;

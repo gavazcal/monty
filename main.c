@@ -24,18 +24,24 @@ int main(int argc, char *argv[])
 		{
 			tokens = strtok(input, delim);
 			number = strtok(NULL, delim);
-			if (number == NULL)
-			{
-				param = 0;
-				executions(tokens, &stack, param);
-			}
 			if (number != NULL)
 			{
 				param = atoi(number);
 				executions(tokens, &stack, param);
 			}
+			if (number == NULL)
+			{
+				param = 0;
+				executions(tokens, &stack, param);
+			}
 		}
 	}
+	while (stack != NULL)
+	{
+		free(stack);
+		stack = stack->next;
+	}
+	free(stack);
 	free(tokens);
 	fclose(file);
 	return (0);
