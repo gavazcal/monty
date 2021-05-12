@@ -34,10 +34,18 @@ int main(int argc, char *argv[])
 		{
 			tokens = strtok(input, delim);
 			number = strtok(NULL, delim);
-			if (number != NULL)
+			while (number != NULL)
 			{
 				param = atoi(number);
-				executions(tokens, &stack, param);
+				if (param == 0)
+				{
+					number = strtok(NULL, delim);
+				}
+				else
+				{
+					executions(tokens, &stack, param);
+					break;
+				}
 			}
 			if (number == NULL)
 			{
