@@ -1,5 +1,5 @@
 #include "monty.h"
-
+void push(stack_t **stack, unsigned int param);
 /**
  * main - a simple monty interpreter
  * @argc: arg count
@@ -17,8 +17,17 @@ int main(int argc, char *argv[])
 
 	opcode = argv[1];
 	file = fopen(opcode, "r");
-
-	if (argc != 0)
+	if (argc != 2)
+	{
+		dprintf(2, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+	if (file == NULL)
+	{
+		dprintf(2, "Error: Can't open file %s\n", argv[1]);
+		exit(EXIT_FAILURE);
+	}
+	if (argc == 2)
 	{
 		for (line_count = 1; getline(&input, &str_len, file) != -1; line_count++)
 		{
