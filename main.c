@@ -1,6 +1,6 @@
 #include "monty.h"
 void push(stack_t **stack, unsigned int param);
-int line_count = 0;
+int line_count;
 /**
  * main - a simple monty interpreter
  * @argc: arg count
@@ -9,12 +9,12 @@ int line_count = 0;
  */
 int main(int argc, char *argv[])
 {
-	char *input, *tokens, *number;
+	char *input = NULL, *tokens = NULL, *number = NULL;
 	size_t str_len = 0;
 	unsigned int param = 0;
-	char *opcode, *delim = " \t\n";
-	FILE *file;
-	stack_t *stack = NULL;
+	char *opcode = NULL, *delim = " \t\n";
+	FILE *file = NULL;
+	stack_t *stack = NULL, *temp = NULL;
 
 	opcode = argv[1];
 	file = fopen(opcode, "r");
@@ -54,12 +54,13 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
+	temp = stack;
 	while (stack != NULL)
 	{
+		temp = stack->next;
 		free(stack);
-		stack = stack->next;
+		stack = temp;
 	}
-	free(stack);
 	free(tokens);
 	fclose(file);
 	return (0);
