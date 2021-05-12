@@ -42,5 +42,6 @@ void executions(char *opcode, stack_t **stack, unsigned int param);
 void push(stack_t **stack, unsigned int param);
 void pall(stack_t **stack, __attribute__((unused))unsigned int param);
 void pint(stack_t **stack, __attribute__((unused))unsigned int param);
+void op_pop(stack_t **stack, __attribute__((unused))unsigned int param);
 
 #endif
