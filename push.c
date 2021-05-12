@@ -2,13 +2,13 @@
 
 /**
  * push - pushes a element into the stack
- * @stack: the stac;
+ * @stack: the stack
  * @param: the parameter
  */
 void push(stack_t **stack, unsigned int param)
 {
 	stack_t *new = NULL;
-	
+
 	if (param == 0)
 	{
 		printf("%d: usage: push interger\n", param);

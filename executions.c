@@ -2,6 +2,7 @@
 
 /**
  * executions - takes the input and compares it to our opcodes
+ * @opcode: opcode being pass on
  * @stack: the stack
  * @param: the parameter
  */
