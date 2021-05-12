@@ -13,6 +13,7 @@ void executions(char *opcode, stack_t **stack, unsigned int param)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
