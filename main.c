@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	char *input, *tokens, *number;
 	size_t str_len = 0;
 	unsigned int line_count, param = 0;
-	char *opcode, *delim = " \n";
+	char *opcode, *delim = " \t\n";
 	FILE *file;
 	stack_t *stack = NULL;
 
