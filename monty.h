@@ -45,6 +45,7 @@ void pint(stack_t **stack, __attribute__((unused))unsigned int param);
 void op_pop(stack_t **stack, __attribute__((unused))unsigned int param);
 void nop(stack_t **stack, unsigned int param);
 void swap(stack_t **stack, __attribute__((unused))unsigned int param);
+void add(stack_t **stack, __attribute__((unused))unsigned int param);
 unsigned int count(stack_t *stack);
 
 #endif
