@@ -23,4 +23,9 @@ void executions(char *opcode, stack_t **stack, unsigned int param)
 			(opcodes[i].f)(stack, param);
 		}
 	}
+	if (opcodes[i].opcode == NULL)
+	{
+		dprintf(2, "%d: unknown instruction %s\n", param, opcode);
+		exit(EXIT_FAILURE);
+	}
 }
