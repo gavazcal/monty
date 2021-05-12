@@ -11,17 +11,17 @@ void push(stack_t **stack, unsigned int param)
 		exit(EXIT_FAILURE);
 	}
 	new->n = param;
-	if (*stack == NULL)
-	{
-		new->next = NULL;
-		new->prev = NULL;
-		*stack = new;
-	}
 	if (*stack != NULL)
 	{
 		new->next = *stack;
 		new->prev = (*stack)->prev;
 		(*stack)->prev = new;
+		*stack = new;
+	}
+	if (*stack == NULL)
+	{
+		new->next = NULL;
+		new->prev = NULL;
 		*stack = new;
 	}
 }

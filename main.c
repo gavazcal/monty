@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	unsigned int line_count, param = 0;
 	char *opcode, *delim = " \n";
 	FILE *file;
+	stack_t *stack = NULL;
 
 	opcode = argv[1];
 	file = fopen(opcode, "r");
@@ -23,10 +24,15 @@ int main(int argc, char *argv[])
 		{
 			tokens = strtok(input, delim);
 			number = strtok(NULL, delim);
-			param = atoi(number);
-			if (strcmp(tokens, "push") == 0)
+			if (number == NULL)
 			{
-				executions(tokens, param);
+				param = 0;
+				executions(tokens, &stack, param);
+			}
+			if (number != NULL)
+			{
+				param = atoi(number);
+				executions(tokens, &stack, param);
 			}
 		}
 	}

@@ -2,11 +2,12 @@
 
 void pall(stack_t **stack, __attribute__((unused))unsigned int param)
 {
-	stack_t *temp = *stack;
+	stack_t *temp;
 
+	temp = *stack;
 	while (temp != NULL)
 	{
 		printf("%d\n", temp->n);
-		temp = temp->prev;
+		temp = temp->next;
 	}
 }
