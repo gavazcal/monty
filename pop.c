@@ -1,4 +1,5 @@
 #include "monty.h"
+
 int line_count;
 /**
  * pop - removes the top element
