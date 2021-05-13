@@ -54,5 +54,5 @@ int main(int argc, char *argv[])
 			executions(tokens, &stack, param);
 		}
 	}
-	return (0);
+	exit(EXIT_SUCCESS);
 }
