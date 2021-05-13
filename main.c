@@ -34,30 +34,29 @@ int main(int argc, char *argv[])
 	on_exit(free_line, &input);
 	for (line_count = 1; getline(&input, &str_len, file) != -1; line_count++)
 	{
-		tokens = strtok(input, delim);
-		if (strcmp(tokens, "#") == 0)
+		if (strcmp(tokens, "#") != 0)
 		{
-			continue;
-		}
-		number = strtok(NULL, delim);
-		while (number != NULL)
-		{
-			num_check = atoi(number);
-			if (num_check == 0 && strcmp(number, "0") != 0)
+			tokens = strtok(input, delim);
+			number = strtok(NULL, delim);
+			while (number != NULL)
 			{
-				number = strtok(NULL, delim);
+				num_check = atoi(number);
+				if (num_check == 0 && strcmp(number, "0") != 0)
+				{
+					number = strtok(NULL, delim);
+				}
+				else
+				{
+					param = number;
+					executions(tokens, &stack, line_count);
+					break;
+				}
 			}
-			else
+			if (number == NULL)
 			{
 				param = number;
 				executions(tokens, &stack, line_count);
-				break;
 			}
-		}
-		if (number == NULL)
-		{
-			param = number;
-			executions(tokens, &stack, line_count);
 		}
 	}
 	exit(EXIT_SUCCESS);
