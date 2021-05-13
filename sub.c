@@ -1,7 +1,7 @@
 #include "monty.h"
 int line_count;
 /**
- * add - sums the top 2 elements
+ * sub - sums the top 2 elements
  * @stack: the stack
  * @param: parameter
  */

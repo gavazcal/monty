@@ -2,7 +2,8 @@
 
 /**
  * free_stack - free stack
- * @stack: the stack
+ * @status: status signal
+ * @line: element to close
  */
 
 void free_stack(int status, void *line)
@@ -21,8 +22,9 @@ void free_stack(int status, void *line)
 }
 
 /**
- * close - closes the file
- * @file: file to be close
+ * close_file - closes the file
+ * @status: status signal
+ * @line: file to close
  */
 
 void close_file(int status, void *line)
@@ -33,11 +35,17 @@ void close_file(int status, void *line)
 	fclose(file);
 }
 
+/**
+ * free_line - free lines
+ * @status: status signal
+ * @line: element to free
+ */
+
 void free_line(int status, void *line)
 {
 	char **liner = line;
 	(void) status;
-	
+
 	if (*liner != NULL)
 	{
 		free(*liner);

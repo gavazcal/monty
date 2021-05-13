@@ -2,7 +2,7 @@
 
 int line_count;
 /**
- * pop - removes the top element
+ * op_pop - removes the top element
  * @stack: the stack
  * @param: the parameter
  */

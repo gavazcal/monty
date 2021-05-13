@@ -19,7 +19,7 @@ void swap(stack_t **stack, __attribute__((unused))unsigned int param)
 
 	if (*stack)
 	{
-		temp = (*stack)-> n;
+		temp = (*stack)->n;
 		(*stack)->n = (*stack)->next->n;
 		(*stack)->next->n = temp;
 		return;
