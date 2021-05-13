@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
 		tokens = strtok(input, delim);
 		if (strcmp(tokens, "#") == 0)
 		{
-			nop(&stack, line_count);
 			continue;
 		}
 		number = strtok(NULL, delim);
