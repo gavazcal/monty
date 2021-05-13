@@ -10,9 +10,13 @@
 int isadigit(char *digit)
 {
 	char *numbers = "0123456789";
-	int i, j;
+	int i = 0, j;
 
-	for (i = 0; digit[i] != '\0'; i++)
+	if (digit[0] == '-')
+	{
+		i = 1;
+	}
+	for (; digit[i] != '\0'; i++)
 	{
 		for (j = 0; numbers[j] != '\0'; j++)
 		{
