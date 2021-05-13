@@ -12,7 +12,12 @@ void push(stack_t **stack, unsigned int line_count)
 
 	if (param == NULL)
 	{
-		dprintf(2, "L%d: usage: push interger\n", line_count);
+		dprintf(2, "L%d: usage: push integer\n", line_count);
+		exit(EXIT_FAILURE);
+	}
+	if (isadigit(param) == 0)
+	{
+		dprintf(2, "L%d: usage: push integer\n", line_count);
 		exit(EXIT_FAILURE);
 	}
 	converter = atoi(param);

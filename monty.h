@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 extern char *param;
 
 /*STRUCTS*/
@@ -54,5 +55,6 @@ unsigned int count(stack_t *stack);
 void close_file(int status, void *line);
 void free_stack(int status, void *line);
 void free_line(int status, void *line);
+int isadigit(char *digit);
 
 #endif
