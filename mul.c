@@ -3,7 +3,7 @@ char *param;
 /**
  * mul - multiplies the top 2 elements
  * @stack: the stack
- * @param: parameter
+ * @line_count: line counter
  */
 
 void mul(stack_t **stack, unsigned int line_count)

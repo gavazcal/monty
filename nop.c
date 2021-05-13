@@ -3,7 +3,7 @@
 /**
  * nop - does nothing
  * @stack: the stack
- * @param: the parameter
+ * @line_count: line counter
  */
 
 void nop(stack_t **stack, unsigned int line_count)

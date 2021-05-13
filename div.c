@@ -3,7 +3,7 @@ char *param;
 /**
  * div_ision - multiplies the top 2 elements
  * @stack: the stack
- * @param: parameter
+ * @line_count: line counter
  */
 
 void div_ision(stack_t **stack, unsigned int line_count)

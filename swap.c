@@ -3,7 +3,7 @@ char *param;
 /**
  * swap - swap the top 2 elements
  * @stack: the stack
- * @param: parameter
+ * @line_count: line counter
  */
 
 void swap(stack_t **stack, unsigned int line_count)

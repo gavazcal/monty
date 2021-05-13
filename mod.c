@@ -3,7 +3,7 @@ char *param;
 /**
  * mod - multiplies the top 2 elements
  * @stack: the stack
- * @param: parameter
+ * @line_count: line counter
  */
 
 void mod(stack_t **stack, unsigned int line_count)

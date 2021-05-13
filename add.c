@@ -3,7 +3,7 @@ char *param;
 /**
  * add - sums the top 2 elements
  * @stack: the stack
- * @param: parameter
+ * @line_count: line counter
  */
 
 void add(stack_t **stack, unsigned int line_count)

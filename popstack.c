@@ -3,7 +3,7 @@ char *param;
 /**
  * op_pop - removes the top element
  * @stack: the stack
- * @param: the parameter
+ * @line_count: line counter
  */
 
 void op_pop(stack_t **stack, unsigned int line_count)

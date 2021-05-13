@@ -3,7 +3,7 @@ char *param;
 /**
  * push - pushes a element into the stack
  * @stack: the stack
- * @param: the parameter
+ * @line_count: line counter
  */
 void push(stack_t **stack, unsigned int line_count)
 {

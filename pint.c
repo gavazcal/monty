@@ -3,7 +3,7 @@ char *param;
 /**
  * pint - prints the top value of the stack
  * @stack: the stack
- * @param: the parameter
+ * @line_count: line counter
  */
 
 void pint(stack_t **stack, unsigned int line_count)
