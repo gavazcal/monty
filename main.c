@@ -34,9 +34,9 @@ int main(int argc, char *argv[])
 	on_exit(free_line, &input);
 	for (line_count = 1; getline(&input, &str_len, file) != -1; line_count++)
 	{
+		tokens = strtok(input, delim);
 		if (strcmp(tokens, "#") != 0)
 		{
-			tokens = strtok(input, delim);
 			number = strtok(NULL, delim);
 			while (number != NULL)
 			{
