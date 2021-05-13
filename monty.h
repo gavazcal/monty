@@ -49,5 +49,8 @@ void add(stack_t **stack, __attribute__((unused))unsigned int param);
 void sub(stack_t **stack, __attribute__((unused))unsigned int param);
 void mul(stack_t **stack, __attribute__((unused))unsigned int param);
 unsigned int count(stack_t *stack);
+void close_file(int status, void *line);
+void free_stack(int status, void *line);
+void free_line(int status, void *line);
 
 #endif
