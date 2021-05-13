@@ -20,6 +20,7 @@ void executions(char *opcode, stack_t **stack, unsigned int param)
 		{"sub", sub},
 		{"mul", mul},
 		{"mod", mod},
+		{"div", div_ision},
 		{NULL, NULL}
 	};
 
