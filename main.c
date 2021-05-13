@@ -12,14 +12,12 @@ int main(int argc, char *argv[])
 	char *input = NULL, *tokens = NULL, *number = NULL;
 	size_t str_len = 0;
 	unsigned int param = 0;
-	char *delim = " \t\n";
+	char *opcode = NULL, *delim = " \t\n";
 	FILE *file = NULL;
 	stack_t *stack = NULL;
 
-	file = fopen(argv[1], "r");
-	on_exit(free_stack, &stack);
-	on_exit(close_file, file);
-	on_exit(free_line, &input);
+	opcode = argv[1];
+	file = fopen(opcode, "r");
 	if (argc != 2)
 	{
 		dprintf(2, "USAGE: monty file\n");
@@ -30,6 +28,9 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
+	on_exit(free_stack, &stack);
+	on_exit(close_file, file);
+	on_exit(free_line, &input);
 	for (line_count = 1; getline(&input, &str_len, file) != -1; line_count++)
 	{
 		tokens = strtok(input, delim);
@@ -53,5 +54,5 @@ int main(int argc, char *argv[])
 			executions(tokens, &stack, param);
 		}
 	}
-	exit(EXIT_SUCCESS);
+	return (0);
 }
