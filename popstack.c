@@ -15,11 +15,7 @@ void op_pop(stack_t **stack, unsigned int line_count)
 		dprintf(2, "L%d: can't pop an empty stack\n", line_count);
 		exit(EXIT_FAILURE);
 	}
-	temp = *stack;
-	(*stack) = (*stack)->next;
-	if (*stack != NULL)
-	{
-		(*stack)->prev = NULL;
-		free(temp);
-	}
+	temp = (*stack)->next;
+	free(*stack);
+	*stack = temp;
 }
