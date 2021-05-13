@@ -1,12 +1,12 @@
 #include "monty.h"
-int line_count;
+char *param;
 /**
  * mod - multiplies the top 2 elements
  * @stack: the stack
  * @param: parameter
  */
 
-void mod(stack_t **stack, __attribute__((unused))unsigned int param)
+void mod(stack_t **stack, unsigned int line_count)
 {
 	stack_t *temp;
 	unsigned int length = 0, num_1 = 0, num_2 = 0, mod = 0;

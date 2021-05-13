@@ -6,8 +6,8 @@
  * @param: the parameter
  */
 
-void nop(stack_t **stack, unsigned int param)
+void nop(stack_t **stack, unsigned int line_count)
 {
 	(void) stack;
-	(void) param;
+	(void) line_count;
 }

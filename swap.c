@@ -1,12 +1,12 @@
 #include "monty.h"
-int line_count;
+char *param;
 /**
  * swap - swap the top 2 elements
  * @stack: the stack
  * @param: parameter
  */
 
-void swap(stack_t **stack, __attribute__((unused))unsigned int param)
+void swap(stack_t **stack, unsigned int line_count)
 {
 	unsigned int length = 0, temp = 0;
 

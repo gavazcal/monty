@@ -1,13 +1,12 @@
 #include "monty.h"
-
-int line_count;
+char *param;
 /**
  * op_pop - removes the top element
  * @stack: the stack
  * @param: the parameter
  */
 
-void op_pop(stack_t **stack, __attribute__((unused))unsigned int param)
+void op_pop(stack_t **stack, unsigned int line_count)
 {
 	stack_t *temp;
 

@@ -1,12 +1,11 @@
 #include "monty.h"
-int line_count;
 /**
  * executions - takes the input and compares it to our opcodes
  * @opcode: opcode being pass on
  * @stack: the stack
- * @param: the parameter
+ * @line_count: the line_counteter
  */
-void executions(char *opcode, stack_t **stack, unsigned int param)
+void executions(char *opcode, stack_t **stack, unsigned int line_count)
 {
 	int i;
 	instruction_t opcodes[] = {
@@ -28,7 +27,7 @@ void executions(char *opcode, stack_t **stack, unsigned int param)
 	{
 		if (strcmp(opcode, opcodes[i].opcode) == 0)
 		{
-			(opcodes[i].f)(stack, param);
+			(opcodes[i].f)(stack, line_count);
 			return;
 		}
 	}

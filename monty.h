@@ -1,10 +1,10 @@
 #ifndef MONTY_H
 #define MONTY_H
-
 /*LIBRARIES*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+extern char *param;
 
 /*STRUCTS*/
 /**
@@ -38,18 +38,18 @@ typedef struct instruction_s
 } instruction_t;
 
 /*PLACEHOLDER FOR FUNCTION PROTOTYPES*/
-void executions(char *opcode, stack_t **stack, unsigned int param);
-void push(stack_t **stack, unsigned int param);
-void pall(stack_t **stack, __attribute__((unused))unsigned int param);
-void pint(stack_t **stack, __attribute__((unused))unsigned int param);
-void op_pop(stack_t **stack, __attribute__((unused))unsigned int param);
-void nop(stack_t **stack, unsigned int param);
-void swap(stack_t **stack, __attribute__((unused))unsigned int param);
-void add(stack_t **stack, __attribute__((unused))unsigned int param);
-void sub(stack_t **stack, __attribute__((unused))unsigned int param);
-void mul(stack_t **stack, __attribute__((unused))unsigned int param);
-void mod(stack_t **stack, __attribute__((unused))unsigned int param);
-void div_ision(stack_t **stack, __attribute__((unused))unsigned int param);
+void executions(char *opcode, stack_t **stack, unsigned int line_count);
+void push(stack_t **stack, unsigned int line_count);
+void pall(stack_t **stack, __attribute__((unused))unsigned int line_count);
+void pint(stack_t **stack, unsigned int line_count);
+void op_pop(stack_t **stack, unsigned int line_count);
+void nop(stack_t **stack, unsigned int line_count);
+void swap(stack_t **stack, unsigned int line_count);
+void add(stack_t **stack, unsigned int line_count);
+void sub(stack_t **stack, unsigned int line_count);
+void mul(stack_t **stack, unsigned int line_count);
+void mod(stack_t **stack, unsigned int line_count);
+void div_ision(stack_t **stack, unsigned int line_count);
 unsigned int count(stack_t *stack);
 void close_file(int status, void *line);
 void free_stack(int status, void *line);

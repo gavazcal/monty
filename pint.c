@@ -1,12 +1,12 @@
 #include "monty.h"
-int line_count;
+char *param;
 /**
  * pint - prints the top value of the stack
  * @stack: the stack
  * @param: the parameter
  */
 
-void pint(stack_t **stack, __attribute__((unused))unsigned int param)
+void pint(stack_t **stack, unsigned int line_count)
 {
 	stack_t *temp;
 

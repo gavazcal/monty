@@ -1,12 +1,12 @@
 #include "monty.h"
-int line_count;
+char *param;
 /**
  * sub - sums the top 2 elements
  * @stack: the stack
  * @param: parameter
  */
 
-void sub(stack_t **stack, __attribute__((unused))unsigned int param)
+void sub(stack_t **stack, unsigned int line_count)
 {
 	stack_t *temp;
 	unsigned int length = 0, num_1 = 0, num_2 = 0, sum = 0;

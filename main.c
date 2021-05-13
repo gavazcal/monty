@@ -1,6 +1,6 @@
 #include "monty.h"
-void push(stack_t **stack, unsigned int param);
-int line_count;
+void push(stack_t **stack, unsigned int line_count);
+char *param;
 /**
  * main - a simple monty interpreter
  * @argc: arg count
@@ -11,7 +11,8 @@ int main(int argc, char *argv[])
 {
 	char *input = NULL, *tokens = NULL, *number = NULL;
 	size_t str_len = 0;
-	unsigned int param = 0;
+	unsigned int line_count;
+	int num_check = 0;
 	char *opcode = NULL, *delim = " \t\n";
 	FILE *file = NULL;
 	stack_t *stack = NULL;
@@ -37,21 +38,22 @@ int main(int argc, char *argv[])
 		number = strtok(NULL, delim);
 		while (number != NULL)
 		{
-			param = atoi(number);
-			if (param == 0)
+			num_check = atoi(number);
+			if (num_check == 0 && strcmp(number, "0") != 0)
 			{
 				number = strtok(NULL, delim);
 			}
 			else
 			{
-				executions(tokens, &stack, param);
+				param = number;
+				executions(tokens, &stack, line_count);
 				break;
 			}
 		}
 		if (number == NULL)
 		{
-			param = 0;
-			executions(tokens, &stack, param);
+			param = number;
+			executions(tokens, &stack, line_count);
 		}
 	}
 	exit(EXIT_SUCCESS);

@@ -5,7 +5,7 @@
  * @stack: the stack
  * @param: the parameter
  */
-void pall(stack_t **stack, __attribute__((unused))unsigned int param)
+void pall(stack_t **stack, __attribute__((unused))unsigned int line_count)
 {
 	stack_t *temp;
 
