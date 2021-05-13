@@ -47,6 +47,7 @@ void nop(stack_t **stack, unsigned int param);
 void swap(stack_t **stack, __attribute__((unused))unsigned int param);
 void add(stack_t **stack, __attribute__((unused))unsigned int param);
 void sub(stack_t **stack, __attribute__((unused))unsigned int param);
+void mul(stack_t **stack, __attribute__((unused))unsigned int param);
 unsigned int count(stack_t *stack);
 
 #endif
